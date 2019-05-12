@@ -1,27 +1,27 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import { all } from "redux-saga/effects";
-import createSagaMiddleware from "redux-saga";
-import { composeWithDevTools } from "redux-devtools-extension";
-import themeReducer from "./ducks/theme";
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { all } from 'redux-saga/effects'
+import createSagaMiddleware from 'redux-saga'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import themeReducer from './ducks/theme'
 
-/** Create Redux Saga Middlewar */
-const sagaMiddleware = createSagaMiddleware();
+/** Criar Redux Saga Middleware */
+const sagaMiddleware = createSagaMiddleware()
 
-/** Combine reducers */
+/** Combinar os reducers */
 const reducers = combineReducers({
   theme: themeReducer
-});
+})
 
-/** Create store Enhacer with middlewares and devtools */
-const storeEnhancer = composeWithDevTools(applyMiddleware(sagaMiddleware));
+/** Criar store melhorada com os middlewares e devtools */
+const storeEnhancer = composeWithDevTools(applyMiddleware(sagaMiddleware))
 
-/** Finally create store */
-export const store = createStore(reducers, storeEnhancer);
+/** Por fim, instanciando a store */
+export const store = createStore(reducers, storeEnhancer)
 
-/** Create Redux Saga yields entrypoints. */
+/** Criar Redux Saga yields entrypoints. */
 function* watchAll() {
-  yield all([]);
+  yield all([])
 }
 
-/**  Run Redux Saga middleware. */
-sagaMiddleware.run(watchAll);
+/**  Por ultimo, Run Redux Saga middleware. */
+sagaMiddleware.run(watchAll)
