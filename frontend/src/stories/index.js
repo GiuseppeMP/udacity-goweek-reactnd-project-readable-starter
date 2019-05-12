@@ -4,6 +4,7 @@ import Switch from '@material-ui/core/Switch'
 import TemplateDefault from 'layouts/TemplateDefault'
 import PostCard from 'components/PostCard'
 import Posts from 'containers/Posts'
+import { withKnobs, text, number } from '@storybook/addon-knobs'
 
 storiesOf('Switch', module).add('Default', () => <Switch color='primary' />)
 
@@ -17,13 +18,15 @@ storiesOf('TemplateDefault', module).add('Default', () => (
 
 storiesOf('Posts', module).add('Default', () => <Posts />)
 
-storiesOf('PostCards', module).add('Default', () => (
-  <PostCard
-    titulo='Storybook Awesome!'
-    autor='Giuseppe Pereira'
-    numComentarios={10}
-    numPontos={113}
-    data='Nov 12'
-    texto='Desenvolvendo o <PostCards/> usando storybook...'
-  />
-))
+storiesOf('PostCards', module)
+  .addDecorator(withKnobs)
+  .add('Default', () => (
+    <PostCard
+      titulo={text('Título', 'Storybook Awesome!')}
+      autor={text('Autor', 'Giuseppe Pereira')}
+      numComentarios={number('Número de Comentários', 10)}
+      numPontos={number('Número de Pontos', 113)}
+      data={text('Data', 'Abril 14')}
+      texto={text('Texto', 'Desenvolvendo o PostCards usando storybook...')}
+    />
+  ))
