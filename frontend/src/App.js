@@ -7,7 +7,7 @@ import Theme from 'themes/Default'
 /**
  * App usando routes, store, redux e material-ui.
  */
-const App = () => {
+export default function App() {
   return (
     <Theme>
       <Provider store={store}>
@@ -16,5 +16,3 @@ const App = () => {
     </Theme>
   )
 }
-
-export default App
