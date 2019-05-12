@@ -2,14 +2,14 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { all } from 'redux-saga/effects'
 import createSagaMiddleware from 'redux-saga'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import themeReducer from './ducks/theme'
+import postsReducer from './ducks/posts'
 
 /** Criar Redux Saga Middleware */
 const sagaMiddleware = createSagaMiddleware()
 
 /** Combinar os reducers */
 const reducers = combineReducers({
-  theme: themeReducer
+  posts: postsReducer
 })
 
 /** Criar store melhorada com os middlewares e devtools */

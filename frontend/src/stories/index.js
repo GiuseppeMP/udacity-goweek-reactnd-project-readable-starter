@@ -15,6 +15,15 @@ storiesOf('TemplateDefault', module).add('Default', () => (
   />
 ))
 
-storiesOf('PostCard', module).add('Default', () => <PostCard />)
-
 storiesOf('Posts', module).add('Default', () => <Posts />)
+
+storiesOf('PostCards', module).add('Default', () => (
+  <PostCard
+    titulo='Storybook Awesome!'
+    autor='Giuseppe Pereira'
+    numComentarios={10}
+    numPontos={113}
+    data='Nov 12'
+    texto='Desenvolvendo o <PostCards/> usando storybook...'
+  />
+))

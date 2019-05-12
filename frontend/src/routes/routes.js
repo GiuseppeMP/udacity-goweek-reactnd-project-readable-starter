@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import Home from 'views/Home'
+import { Home } from 'views'
 
 const Routes = props => {
   return (
