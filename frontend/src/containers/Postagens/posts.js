@@ -14,12 +14,6 @@ export default class posts extends Component {
       />
     )
 
-    return (
-      <div>
-        {PostCardDefault}
-        {PostCardDefault}
-        {PostCardDefault}
-      </div>
-    )
+    return <div>{PostCardDefault}</div>
   }
 }

@@ -43,16 +43,16 @@ const darkPallete = {
     common: { black: '#000', white: '#fff' },
     background: { paper: '#000', default: 'rgba(255, 255, 255, 1)' },
     primary: {
-      light: '#000',
-      main: '#000',
-      dark: '#000',
+      light: '#fff',
+      main: '#fff',
+      dark: '#fff',
       contrastText: '#fff'
     },
     secondary: {
       light: 'rgba(180, 177, 178, 1)',
       main: 'rgba(65, 61, 61, 1)',
       dark: 'rgba(128, 128, 128, 1)',
-      contrastText: 'rgba(255, 255, 255, 1)'
+      contrastText: 'fff'
     },
     error: {
       light: '#e57373',
@@ -61,7 +61,7 @@ const darkPallete = {
       contrastText: '#fff'
     },
     text: {
-      primary: 'rgba(0, 0, 0, 0.87)',
+      primary: '#fff',
       secondary: 'rgba(0, 0, 0, 0.54)',
       disabled: 'rgba(0, 0, 0, 0.38)',
       hint: 'rgba(0, 0, 0, 0.38)'

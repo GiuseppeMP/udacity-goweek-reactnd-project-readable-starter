@@ -21,7 +21,7 @@ const api = axios.create({
  */
 const mountHeaders = () => ({
   'Content-Type': 'application/json',
-  Autorization: Date.now()
+  Authorization: Date.now()
 })
 
 /**
